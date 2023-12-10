@@ -26,9 +26,9 @@ $provider = new \League\OAuth2\Client\Provider\GenericProvider([
     'clientId'                => '',    // The client ID assigned to you by the provider
     'clientSecret'            => 'XXXXXX',    // The client password assigned to you by the provider
     'redirectUri'             => 'https://tmf.space/prod/oa2/',
-    'urlAuthorize'            => 'https://service.example.com/authorize',
-    'urlAccessToken'          => 'https://service.example.com/token',
-    'urlResourceOwnerDetails' => 'https://service.example.com/resource'
+    'urlAuthorize'            => 'https://warhorn.net/oauth/authorize',
+    'urlAccessToken'          => 'https://warhorn.net/oauth/token',
+    'urlResourceOwnerDetails' => 'https://warhorn.net/oauth/resource'
 ]);
 
 // If we don't have an authorization code then get one
@@ -90,7 +90,7 @@ if (!isset($_GET['code'])) {
         // to Psr\Http\Message\RequestInterface.
         $request = $provider->getAuthenticatedRequest(
             'GET',
-            'https://service.example.com/resource',
+            'https://warhorn.net/oauth/resource',
             $accessToken
         );
 
