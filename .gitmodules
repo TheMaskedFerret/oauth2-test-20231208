@@ -1,3 +1,6 @@
 [submodule "vendor/thephpleague/oauth2-client"]
 	path = vendor/thephpleague/oauth2-client
 	url = https://github.com/thephpleague/oauth2-client
+[submodule "vendor/guzzle/guzzle"]
+	path = vendor/guzzle/guzzle
+	url = https://github.com/guzzle/guzzle
