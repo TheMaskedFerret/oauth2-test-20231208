@@ -4,21 +4,11 @@
  
 <?php
 
-function thephpleague_oauth_client_autoloader($class) {
-    echo $class . '<br />';
-}
-
-spl_autoload_register('thephpleague_oauth_client_autoloader');
-
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 //Require 
-require "vendor/thephpleague/oauth2-client/src/Token/AccessTokenInterface.php";
-require "vendor/thephpleague/oauth2-client/src/Token/AccessToken.php";
-require "vendor/thephpleague/oauth2-client/src/Tool/BearerAuthorizationTrait.php";
-require "vendor/thephpleague/oauth2-client/src/Provider/AbstractProvider.php";
-require "vendor/thephpleague/oauth2-client/src/Provider/GenericProvider.php";
+require "vendor/vendors.php";
 
 $provider = new \League\OAuth2\Client\Provider\GenericProvider([
     'clientId'                => '',    // The client ID assigned to you by the provider
