@@ -6,6 +6,15 @@
 
 $_SERVER['DOCUMENT_ROOT_DIR'] = __DIR__;
 
+use Monolog\Logger;
+use Monolog\Handler\StreamHandler;
+use Monolog\Handler\BrowserConsoleHandler;
+use Monolog\Processor\WebProcessor;
+
+$GLOBALS["logger"] = new Logger('general');
+$GLOBALS["logger"]->pushProcessor(new WebProcessor); // pushing the web server preprocessor
+$browserHandler = new BrowserConsoleHandler(Monolog\Level::Info);
+$GLOBALS["logger"]->pushHandler($browserHandler);
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
