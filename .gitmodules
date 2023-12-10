@@ -4,3 +4,6 @@
 [submodule "vendor/guzzle/guzzle"]
 	path = vendor/guzzle/guzzle
 	url = https://github.com/guzzle/guzzle
+[submodule "vendor/Seldek/monolog"]
+	path = vendor/Seldek/monolog
+	url = https://github.com/Seldaek/monolog
